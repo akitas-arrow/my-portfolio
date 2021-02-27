@@ -1,0 +1,98 @@
+//縦スマホ
+
+body {
+  font-family: "Roboto Mono", "Noto Sans JP", monospace, sans-serif;
+  color: $cGray;
+  letter-spacing: 0.05em;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 15px;
+}
+.font-lr {
+  font-size: 20px;
+}
+.font-lg {
+  font-size: 26px;
+}
+.font-bg {
+  font-size: 30px;
+}
+.pb-sm {
+  padding-bottom: 40px;
+}
+.pb-md {
+  padding-bottom: 72px;
+}
+.pt-sm {
+  padding-top: 40px;
+}
+.pt-md {
+  padding-top: 72px;
+}
+.cursive-style {
+  font-family: "Cookie", cursive;
+  line-height: 1;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.cover {
+  @extend .wrapper;
+  background: url(../../image/top.jpg) no-repeat;
+  background-size: cover;
+  &__container {
+    @extend .content-width;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 90px;
+    text-align: center;
+    line-height: 1;
+  }
+  &__sub-title {
+    @extend .font-sm;
+    height: 45vh;
+    font-weight: 500;
+  }
+  &__cursive-style {
+    @extend .cursive-style;
+    font-size: 82px;
+  }
+}
+
+.about {
+  @extend .wrapper;
+  @extend .pt-sm;
+  @extend .pb-sm;
+  &__top-container {
+    img {
+      width: 80%;
+    }
+  }
+  &__text-container {
+    @extend .content-width;
+  }
+  &__text {
+    @extend .font-md;
+    line-height: 2;
+    width: 80%;
+  }
+}
+
+.skill {
+  @extend .wrapper;
+  border: 16px solid $cBeige;
+}
