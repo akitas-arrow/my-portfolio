@@ -20,17 +20,20 @@ body {
 .font-bg {
   font-size: 30px;
 }
-.pb-sm {
-  padding-bottom: 40px;
-}
-.pb-md {
-  padding-bottom: 72px;
-}
 .pt-sm {
-  padding-top: 40px;
+  padding-top: 32px;
 }
 .pt-md {
-  padding-top: 72px;
+  padding-top: 64px;
+}
+.pb-sm {
+  padding-bottom: 32px;
+}
+.pb-md {
+  padding-bottom: 64px;
+}
+.mb-sm {
+  margin-bottom: 32px;
 }
 .cursive-style {
   font-family: "Cookie", cursive;
@@ -40,10 +43,14 @@ body {
   width: 100%;
   height: 100vh;
 }
-.content-width {
+.container-width {
   width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cover {
@@ -51,7 +58,7 @@ body {
   background: url(../../image/top.jpg) no-repeat;
   background-size: cover;
   &__container {
-    @extend .content-width;
+    @extend .container-width;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,24 +82,79 @@ body {
 
 .about {
   @extend .wrapper;
-  @extend .pt-sm;
+  @extend .pt-md;
   @extend .pb-sm;
-  &__top-container {
-    img {
-      width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  &__title {
+    h2 {
+      @extend .font-bg;
+      display: inline-block;
+      line-height: 3;
+      padding: 0 40px;
+      color: $cBeige;
+      background: $cPink;
     }
   }
   &__text-container {
-    @extend .content-width;
+    @extend .container-width;
   }
   &__text {
     @extend .font-md;
     line-height: 2;
     width: 80%;
+    p {
+      margin: 0;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+  img {
+    position: absolute;
+    width: 80%;
+    top: 32px;
+    right: 0;
+    z-index: -1;
   }
 }
 
 .skill {
   @extend .wrapper;
   border: 16px solid $cBeige;
+  h2 {
+    @extend .font-lg;
+    color: $cPink;
+    line-height: 3;
+    text-align: center;
+  }
+  &__items {
+    @extend .content-width;
+    display: flex;
+  }
+  .programming {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .web-design {
+    justify-content: center;
+    div:last-child {
+      margin-left: 16px;
+    }
+  }
+  &__item {
+    width: calc((100% - 32px) / 3);
+    @extend .mb-sm;
+    img {
+      display: block;
+      @extend .content-width;
+    }
+    p {
+      @extend .font-sm;
+      padding-top: 8px;
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
 }
