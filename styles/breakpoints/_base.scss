@@ -4,36 +4,46 @@ body {
   font-family: "Roboto Mono", "Noto Sans JP", monospace, sans-serif;
   color: $cGray;
   letter-spacing: 0.05em;
+  line-height: 1.5;
+  h2 {
+    line-height: 3;
+  }
 }
 .font-sm {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 .font-md {
-  font-size: 15px;
+  font-size: 15px !important;
 }
 .font-lr {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .font-lg {
-  font-size: 26px;
+  font-size: 26px !important;
 }
 .font-bg {
-  font-size: 30px;
+  font-size: 30px !important;
 }
 .pt-sm {
-  padding-top: 32px;
+  padding-top: 32px !important;
 }
 .pt-md {
-  padding-top: 64px;
+  padding-top: 64px !important;
 }
 .pb-sm {
-  padding-bottom: 32px;
+  padding-bottom: 32px !important;
 }
 .pb-md {
-  padding-bottom: 64px;
+  padding-bottom: 64px !important;
+}
+.mt-sm {
+  margin-top: 32px !important;
 }
 .mb-sm {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
+}
+.mb-md {
+  margin-bottom: 64px !important;
 }
 .cursive-style {
   font-family: "Cookie", cursive;
@@ -92,7 +102,6 @@ body {
     h2 {
       @extend .font-bg;
       display: inline-block;
-      line-height: 3;
       padding: 0 40px;
       color: $cBeige;
       background: $cPink;
@@ -122,21 +131,28 @@ body {
 .skill {
   @extend .wrapper;
   border: 16px solid $cBeige;
+  display: flex;
+  flex-direction: column;
   h2 {
     @extend .font-lg;
     color: $cPink;
-    line-height: 3;
     text-align: center;
   }
   &__items {
     @extend .content-width;
+    flex: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .programming {
+  &__programming {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .web-design {
+  &__web-design {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     div:last-child {
       margin-left: 16px;
@@ -155,6 +171,81 @@ body {
       margin: 0;
       text-align: center;
       font-weight: 500;
+    }
+  }
+}
+
+.works {
+  &__title {
+    text-align: center;
+    @extend .mt-sm;
+    @extend .mb-sm;
+  }
+  &__item {
+    @extend .content-width;
+    @extend .mb-md;
+    &__img {
+      @extend .mb-sm;
+      width: 100%;
+      padding-top: 125%;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      p {
+        @extend .cursive-style;
+        color: $cPink;
+        font-size: 50px;
+        position: absolute;
+      }
+    }
+    &__title {
+      @extend .font-lr;
+    }
+    &__text {
+      @extend .font-md;
+      line-height: 2;
+    }
+  }
+  #todo {
+    .works__item__img {
+      background-image: url(../../image/app.png);
+      p {
+        top: 0;
+        left: 0;
+        transform: translateY(-70%);
+      }
+    }
+  }
+  #blog {
+    .works__item__img {
+      background-image: url(../../image/blog.jpg);
+      background-position: top center;
+      p {
+        top: 0;
+        right: 0;
+        transform: translateY(-70%);
+      }
+    }
+  }
+  #website {
+    .works__item__img {
+      background-image: url(../../image/csite.jpg);
+      p {
+        top: 0;
+        left: 0;
+        transform: translateY(-70%);
+      }
+    }
+  }
+  #portfolio {
+    .works__item__img {
+      background-image: url(../../image/portfolio.jpg);
+      background-position: top center;
+      p {
+        top: 0;
+        right: 0;
+        transform: translateY(-70%);
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css">
+  <link rel="stylesheet" href="styles/vendors/ress.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -39,42 +39,94 @@
   </section>
   <section class="skill">
     <h2>SKILL</h2>
-    <div class="skill__items programming">
-      <div class="skill__item">
-        <img src="./image/html5-plain.svg" alt="html">
-        <p class="skill__item-title">HTML</p>
+    <div class="skill__items">
+      <div class="skill__programming">
+        <div class="skill__item">
+          <img src="./image/html5-plain.svg" alt="html">
+          <p class="skill__item-title">HTML</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/css3-plain.svg" alt="css">
+          <p class="skill__item-title">CSS</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/sass-original.svg" alt="sass">
+          <p class="skill__item-title">Sass</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/javascript-plain.svg" alt="JavaScript">
+          <p class="skill__item-title">JavaScript</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/react-original.svg" alt="react">
+          <p class="skill__item-title">React</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/gatsby-original.svg" alt="gatsby">
+          <p class="skill__item-title">Gatsby</p>
+        </div>
       </div>
-      <div class="skill__item">
-        <img src="./image/css3-plain.svg" alt="css">
-        <p class="skill__item-title">CSS</p>
-      </div>
-      <div class="skill__item">
-        <img src="./image/sass-original.svg" alt="sass">
-        <p class="skill__item-title">Sass</p>
-      </div>
-      <div class="skill__item">
-        <img src="./image/javascript-plain.svg" alt="JavaScript">
-        <p class="skill__item-title">JavaScript</p>
-      </div>
-      <div class="skill__item">
-        <img src="./image/react-original.svg" alt="react">
-        <p class="skill__item-title">React</p>
-      </div>
-      <div class="skill__item">
-        <img src="./image/gatsby-original.svg" alt="gatsby">
-        <p class="skill__item-title">Gatsby</p>
-      </div>
-    </div>
-    <div class="skill__items web-design">
-      <div class="skill__item">
-        <img src="./image/illustrator-line.svg" alt="illustrator">
-        <p class="skill__item-title">illustrator</p>
-      </div>
-      <div class="skill__item">
-        <img src="./image/xd-line.svg" alt="xd">
-        <p class="skill__item-title">xd</p>
+      <div class="skill__web-design">
+        <div class="skill__item">
+          <img src="./image/illustrator-line.svg" alt="illustrator">
+          <p class="skill__item-title">illustrator</p>
+        </div>
+        <div class="skill__item">
+          <img src="./image/xd-line.svg" alt="xd">
+          <p class="skill__item-title">xd</p>
+        </div>
       </div>
     </div>
   </section>
+  <section class="works">
+    <h2 class="works__title">WORKS</h2>
+    <div class="works__items">
+      <div class="works__item" id="todo">
+        <div class="works__item__img">
+          <p>WebApp</p>
+        </div>
+        <p class="works__item__title">タスク管理アプリ</p>
+        <p class="works__item__text">
+          React/Material-UI/Firebase</br>
+          シンプルなタスク管理アプリです。CloudFirestoreでデータの永続化をしています。</br>
+          <a href="https://react-todolist-38368.web.app/">https://react-todolist-38368.web.app/</a>
+        </p>
+      </div>
+      <div class="works__item" id="blog">
+        <div class="works__item__img">
+          <p>Blog</p>
+        </div>
+        <p class="works__item__title">笠井心様ブログ</p>
+        <br class="works__item__text">
+          Gatsby/Contentful/Netlify</br>
+          起業やフリーランスなどのキャリアに関する情報発信をするブログです。記事はContentfulから投稿しています。</br>
+          <a href="https://cocolo.netlify.app/">https://cocolo.netlify.app/</a>
+        </p>
+      </div>
+      <div class="works__item" id="website">
+        <div class="works__item__img">
+          <p>WebSite</p>
+        </div>
+        <p class="works__item__title">トモエ屋様コーポレートサイト</p>
+        <p class="works__item__text">
+          Gatsby/MicroCMS/Netlify</br>
+          既存のサイトをリニューアルしました。問い合わせフォームにはNetlifyFormsを使用しています。
+        </p>
+      </div>
+      <div class="works__item" id="portfolio">
+        <div class="works__item__img">
+          <p>Portfolio</p>
+        </div>
+        <p class="works__item__title">ポートフォリオサイト</p>
+        <p class="works__item__text">
+          HTML/Sass/Netlify</br>
+          当サイトです。雑誌の紙面をイメージしてデザインしました。自身に関する情報をまとめています。
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h2>SNS</h2>
+  </footer>
 </body>
 </html>
