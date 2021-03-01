@@ -78,11 +78,11 @@ wrapper, container
   width: 100%;
   height: 100vh;
 }
-.container-width {
-  width: 90%;
-  margin: 0 auto;
-  max-width: $contentMaxWidth;
-}
+// .container-width {
+//   width: 90%;
+//   margin: 0 auto;
+//   max-width: $contentMaxWidth;
+// }
 .content-width {
   width: 90%;
   margin: 0 auto;
@@ -95,10 +95,20 @@ cover
 ——————————————————————————————————————————————*/
 .cover {
   @extend .wrapper;
-  background: url(../../image/top.jpg) no-repeat;
-  background-size: cover;
+  position: relative;
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../image/top.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
   &__container {
-    @extend .container-width;
+    @extend .content-width;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -116,6 +126,7 @@ cover
   }
   &__cursive-style {
     @extend .cursive-style;
+    line-height: 1.2;
     font-size: 82px;
   }
 }
@@ -144,7 +155,7 @@ about
     }
   }
   &__text-container {
-    @extend .container-width;
+    @extend .content-width;
   }
   &__text {
     @extend .font-md;
@@ -244,12 +255,15 @@ works
 ——————————————————————————————————————————————*/
 .works {
   &__title {
+    @extend .font-lg;
     text-align: center;
     @extend .mt-sm;
     @extend .mb-sm;
   }
-  &__item {
+  &__items {
     @extend .content-width;
+  }
+  &__item {
     @extend .mb-md;
     &__img {
       @extend .mb-sm;
@@ -329,6 +343,7 @@ footer {
     text-align: center;
     color: $cWhite;
     @extend .mb-sm;
+    @extend .font-lg;
   }
   .sns-icons {
     display: flex;

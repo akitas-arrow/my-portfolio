@@ -35,7 +35,7 @@ font
   font-size: 20px !important;
 }
 
-.font-lg, .skill h2 {
+.font-lg, .skill h2, .works__title, footer h2 {
   font-size: 26px !important;
 }
 
@@ -90,13 +90,7 @@ wrapper, container
   height: 100vh;
 }
 
-.container-width, .cover__container, .about__text-container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1100px;
-}
-
-.content-width, .skill__items, .skill__item img, .works__item {
+.content-width, .cover__container, .about__text-container, .skill__items, .skill__item img, .works__items {
   width: 90%;
   margin: 0 auto;
 }
@@ -107,8 +101,19 @@ cover
 
 ——————————————————————————————————————————————*/
 .cover {
+  position: relative;
+}
+
+.cover ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url(../../image/top.jpg) no-repeat;
   background-size: cover;
+  z-index: -1;
 }
 
 .cover__container {
@@ -137,6 +142,7 @@ cover
 }
 
 .cover__cursive-style {
+  line-height: 1.2;
   font-size: 82px;
 }
 
@@ -406,5 +412,330 @@ footer .sns-icons .icon#twitter, footer .sns-icons .icon#wantedly {
 
 footer .sns-icons :last-child {
   margin-right: 0;
+}
+
+@media (orientation: landscape) {
+  /* =============================================
+
+モバイル横
+
+============================================= */
+  /*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
+  .pt-md, .about {
+    padding-top: 32px !important;
+  }
+  .pb-md, footer {
+    padding-top: 32px !important;
+  }
+  /*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
+  .cover ::before {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+  /*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
+  .about {
+    height: auto;
+  }
+  .about__text {
+    width: 100%;
+  }
+  .about img {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  /*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
+  .skill {
+    height: auto;
+  }
+  .skill__item {
+    width: calc((100% - 32px) / 6);
+  }
+  .skill__web-design .sub-title {
+    bottom: auto;
+    right: auto;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateY(-120%) translateX(100%) rotate(-10deg);
+            transform: translateY(-120%) translateX(100%) rotate(-10deg);
+  }
+  /*————————————————————————————————————————————
+
+works
+
+——————————————————————————————————————————————*/
+  .works__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .works__item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media (orientation: portrait) and (min-width: 600px) {
+  /* =============================================
+
+タブレット縦
+
+============================================= */
+  /*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
+  /*
+font
+——————————————————————*/
+  .font-sm, .cover__sub-title, .skill__item p {
+    font-size: 16px !important;
+  }
+  .font-md, .about__text, .works__item__text {
+    font-size: 16px !important;
+  }
+  .font-lg, .skill h2, .works__title, footer h2 {
+    font-size: 35px !important;
+  }
+  .font-bg, .about__title h2 {
+    font-size: 63px !important;
+  }
+  /*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
+  .cover__title {
+    font-size: 230px;
+  }
+  .cover__cursive-style {
+    font-size: 132px;
+  }
+  /*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
+  .about__text {
+    width: 30%;
+  }
+  /*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
+  .skill {
+    border: 32px solid #f6e9ce;
+  }
+  .skill__items {
+    width: 75%;
+  }
+  .skill__items .sub-title {
+    font-size: 60px;
+  }
+  /*————————————————————————————————————————————
+
+works
+
+——————————————————————————————————————————————*/
+  .works__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .works__item {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  /* =============================================
+
+タブレット横
+
+============================================= */
+  /*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
+  /*
+font
+——————————————————————*/
+  .font-sm, .cover__sub-title, .skill__item p {
+    font-size: 16px !important;
+  }
+  .font-md, .about__text, .works__item__text {
+    font-size: 16px !important;
+  }
+  .font-lg, .skill h2, .works__title, footer h2 {
+    font-size: 35px !important;
+  }
+  .font-bg, .about__title h2 {
+    font-size: 63px !important;
+  }
+  /*
+padding
+——————————————————————*/
+  .pt-sm {
+    padding-top: 40px !important;
+  }
+  .pt-md, .about {
+    padding-top: 80px !important;
+  }
+  .pb-sm, .about {
+    padding-bottom: 40px !important;
+  }
+  .pb-md, footer {
+    padding-bottom: 80px !important;
+  }
+  /*
+margin
+——————————————————————*/
+  .mt-sm, .skill__web-design, .works__title {
+    margin-top: 40px !important;
+  }
+  .mb-sm, .skill__programming .skill__item, .works__title, .works__item__img, footer h2 {
+    margin-bottom: 40px !important;
+  }
+  .mb-md, .works__item {
+    margin-bottom: 80px !important;
+  }
+  /*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
+  .cover__title {
+    font-size: 230px;
+  }
+  .cover__cursive-style {
+    font-size: 132px;
+  }
+  /*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
+  .about {
+    height: 100vh;
+  }
+  .about__text {
+    width: 30%;
+  }
+  /*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
+  .skill {
+    height: 100vh;
+    border: 32px solid #f6e9ce;
+  }
+  .skill__items .sub-title {
+    font-size: 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  /* =============================================
+
+PC
+
+============================================= */
+  /*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
+  /*
+padding
+——————————————————————*/
+  .pt-sm {
+    padding-top: 60px !important;
+  }
+  .pt-md, .about {
+    padding-top: 120px !important;
+  }
+  .pb-sm, .about {
+    padding-bottom: 60px !important;
+  }
+  .pb-md, footer {
+    padding-bottom: 120px !important;
+  }
+  /*
+margin
+——————————————————————*/
+  .mt-sm, .skill__web-design, .works__title {
+    margin-top: 60px !important;
+  }
+  .mb-sm, .skill__programming .skill__item, .works__title, .works__item__img, footer h2 {
+    margin-bottom: 60px !important;
+  }
+  .mb-md, .works__item {
+    margin-bottom: 120px !important;
+  }
+  /*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
+  .cover__title {
+    font-size: 150px;
+  }
+  /*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
+  .skill {
+    border: 32px solid #f6e9ce;
+  }
+  .skill__items {
+    width: 55%;
+  }
+  .skill__items .sub-title {
+    font-size: 60px;
+  }
+  /*————————————————————————————————————————————
+
+works
+
+——————————————————————————————————————————————*/
+  .works__item {
+    width: calc((100% - 120px) / 4);
+  }
 }
 /*# sourceMappingURL=style.css.map */

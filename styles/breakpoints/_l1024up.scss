@@ -1,0 +1,96 @@
+/* =============================================
+
+タブレット横
+
+============================================= */
+
+/*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
+/*
+font
+——————————————————————*/
+.font-sm {
+  font-size: 16px !important;
+}
+.font-md {
+  font-size: 16px !important;
+}
+.font-lg {
+  font-size: 35px !important;
+}
+.font-bg {
+  font-size: 63px !important;
+}
+
+/*
+padding
+——————————————————————*/
+.pt-sm {
+  padding-top: 40px !important;
+}
+.pt-md {
+  padding-top: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 40px !important;
+}
+.pb-md {
+  padding-bottom: 80px !important;
+}
+
+/*
+margin
+——————————————————————*/
+.mt-sm {
+  margin-top: 40px !important;
+}
+.mb-sm {
+  margin-bottom: 40px !important;
+}
+.mb-md {
+  margin-bottom: 80px !important;
+}
+
+/*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
+.cover {
+  &__title {
+    font-size: 230px;
+  }
+  &__cursive-style {
+    font-size: 132px;
+  }
+}
+
+/*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
+.about {
+  height: 100vh;
+  &__text {
+    width: 30%;
+  }
+}
+
+/*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
+.skill {
+  height: 100vh;
+  border: 32px solid $cBeige;
+  &__items {
+    .sub-title {
+      font-size: 60px;
+    }
+  }
+}
