@@ -1,5 +1,14 @@
-//縦スマホ
+/* =============================================
 
+モバイル縦
+
+============================================= */
+
+/*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
 body {
   font-family: "Roboto Mono", "Noto Sans JP", monospace, sans-serif;
   color: $cGray;
@@ -9,6 +18,10 @@ body {
     line-height: 3;
   }
 }
+
+/*
+font
+——————————————————————*/
 .font-sm {
   font-size: 14px !important;
 }
@@ -24,6 +37,14 @@ body {
 .font-bg {
   font-size: 30px !important;
 }
+.cursive-style {
+  font-family: "Cookie", cursive;
+  line-height: 1;
+}
+
+/*
+padding
+——————————————————————*/
 .pt-sm {
   padding-top: 32px !important;
 }
@@ -36,6 +57,10 @@ body {
 .pb-md {
   padding-bottom: 64px !important;
 }
+
+/*
+margin
+——————————————————————*/
 .mt-sm {
   margin-top: 32px !important;
 }
@@ -45,10 +70,10 @@ body {
 .mb-md {
   margin-bottom: 64px !important;
 }
-.cursive-style {
-  font-family: "Cookie", cursive;
-  line-height: 1;
-}
+
+/*
+wrapper, container
+——————————————————————*/
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -63,6 +88,11 @@ body {
   margin: 0 auto;
 }
 
+/*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
 .cover {
   @extend .wrapper;
   background: url(../../image/top.jpg) no-repeat;
@@ -89,6 +119,12 @@ body {
     font-size: 82px;
   }
 }
+
+/*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
 
 .about {
   @extend .wrapper;
@@ -128,6 +164,11 @@ body {
   }
 }
 
+/*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
 .skill {
   @extend .wrapper;
   border: 16px solid $cBeige;
@@ -144,23 +185,44 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .sub-title {
+      @extend .cursive-style;
+      font-size: 34px;
+      position: absolute;
+      color: $cBeige;
+    }
   }
   &__programming {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
+    .skill__item {
+      @extend .mb-sm;
+    }
+    .sub-title {
+      top: 0;
+      left: 0;
+      transform: translateY(-120%) rotate(-10deg);
+    }
   }
   &__web-design {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    @extend .mt-sm;
+    .sub-title {
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%) rotate(-10deg);
+    }
     div:last-child {
       margin-left: 16px;
     }
   }
   &__item {
     width: calc((100% - 32px) / 3);
-    @extend .mb-sm;
     img {
       display: block;
       @extend .content-width;
@@ -175,6 +237,11 @@ body {
   }
 }
 
+/*————————————————————————————————————————————
+
+works
+
+——————————————————————————————————————————————*/
 .works {
   &__title {
     text-align: center;
@@ -246,6 +313,50 @@ body {
         right: 0;
         transform: translateY(-70%);
       }
+    }
+  }
+}
+
+/*————————————————————————————————————————————
+
+footer
+
+——————————————————————————————————————————————*/
+footer {
+  background: $cPink;
+  @extend .pb-md;
+  h2 {
+    text-align: center;
+    color: $cWhite;
+    @extend .mb-sm;
+  }
+  .sns-icons {
+    display: flex;
+    justify-content: center;
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 24px;
+      a {
+        display: block;
+      }
+      &#github {
+        background-color: transparent;
+      }
+      &#twitter {
+        svg {
+          fill: #00acee;
+        }
+      }
+      &#twitter,
+      &#wantedly {
+        background-color: $cWhite;
+        padding: 8px;
+      }
+    }
+    :last-child {
+      margin-right: 0;
     }
   }
 }

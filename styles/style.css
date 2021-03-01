@@ -1,3 +1,14 @@
+@charset "UTF-8";
+/* =============================================
+
+モバイル縦
+
+============================================= */
+/*————————————————————————————————————————————
+
+共通パーツ
+
+——————————————————————————————————————————————*/
 body {
   font-family: "Roboto Mono", "Noto Sans JP", monospace, sans-serif;
   color: #727a84;
@@ -9,6 +20,9 @@ body h2 {
   line-height: 3;
 }
 
+/*
+font
+——————————————————————*/
 .font-sm, .cover__sub-title, .skill__item p {
   font-size: 14px !important;
 }
@@ -29,6 +43,14 @@ body h2 {
   font-size: 30px !important;
 }
 
+.cursive-style, .cover__cursive-style, .skill__items .sub-title, .works__item__img p {
+  font-family: "Cookie", cursive;
+  line-height: 1;
+}
+
+/*
+padding
+——————————————————————*/
 .pt-sm {
   padding-top: 32px !important;
 }
@@ -41,15 +63,18 @@ body h2 {
   padding-bottom: 32px !important;
 }
 
-.pb-md {
+.pb-md, footer {
   padding-bottom: 64px !important;
 }
 
-.mt-sm, .works__title {
+/*
+margin
+——————————————————————*/
+.mt-sm, .skill__web-design, .works__title {
   margin-top: 32px !important;
 }
 
-.mb-sm, .skill__item, .works__title, .works__item__img {
+.mb-sm, .skill__programming .skill__item, .works__title, .works__item__img, footer h2 {
   margin-bottom: 32px !important;
 }
 
@@ -57,11 +82,9 @@ body h2 {
   margin-bottom: 64px !important;
 }
 
-.cursive-style, .cover__cursive-style, .works__item__img p {
-  font-family: "Cookie", cursive;
-  line-height: 1;
-}
-
+/*
+wrapper, container
+——————————————————————*/
 .wrapper, .cover, .about, .skill {
   width: 100%;
   height: 100vh;
@@ -78,6 +101,11 @@ body h2 {
   margin: 0 auto;
 }
 
+/*————————————————————————————————————————————
+
+cover
+
+——————————————————————————————————————————————*/
 .cover {
   background: url(../../image/top.jpg) no-repeat;
   background-size: cover;
@@ -112,6 +140,11 @@ body h2 {
   font-size: 82px;
 }
 
+/*————————————————————————————————————————————
+
+about
+
+——————————————————————————————————————————————*/
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +184,11 @@ body h2 {
   z-index: -1;
 }
 
+/*————————————————————————————————————————————
+
+skill
+
+——————————————————————————————————————————————*/
 .skill {
   border: 16px solid #f6e9ce;
   display: -webkit-box;
@@ -183,6 +221,12 @@ body h2 {
           justify-content: center;
 }
 
+.skill__items .sub-title {
+  font-size: 34px;
+  position: absolute;
+  color: #f6e9ce;
+}
+
 .skill__programming {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,6 +236,14 @@ body h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+.skill__programming .sub-title {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-120%) rotate(-10deg);
+          transform: translateY(-120%) rotate(-10deg);
 }
 
 .skill__web-design {
@@ -203,6 +255,14 @@ body h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.skill__web-design .sub-title {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(100%) rotate(-10deg);
+          transform: translateY(100%) rotate(-10deg);
 }
 
 .skill__web-design div:last-child {
@@ -224,6 +284,11 @@ body h2 {
   font-weight: 500;
 }
 
+/*————————————————————————————————————————————
+
+works
+
+——————————————————————————————————————————————*/
 .works__title {
   text-align: center;
 }
@@ -290,5 +355,56 @@ body h2 {
   right: 0;
   -webkit-transform: translateY(-70%);
           transform: translateY(-70%);
+}
+
+/*————————————————————————————————————————————
+
+footer
+
+——————————————————————————————————————————————*/
+footer {
+  background: #f3ac94;
+}
+
+footer h2 {
+  text-align: center;
+  color: #fff;
+}
+
+footer .sns-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .sns-icons .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+footer .sns-icons .icon a {
+  display: block;
+}
+
+footer .sns-icons .icon#github {
+  background-color: transparent;
+}
+
+footer .sns-icons .icon#twitter svg {
+  fill: #00acee;
+}
+
+footer .sns-icons .icon#twitter, footer .sns-icons .icon#wantedly {
+  background-color: #fff;
+  padding: 8px;
+}
+
+footer .sns-icons :last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=style.css.map */
