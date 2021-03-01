@@ -639,7 +639,7 @@ cover
 
 ——————————————————————————————————————————————*/
   .cover__title {
-    font-size: 230px;
+    font-size: 150px;
   }
   .cover__cursive-style {
     font-size: 132px;
@@ -706,14 +706,6 @@ margin
   }
   .mb-md, .works__item {
     margin-bottom: 120px !important;
-  }
-  /*————————————————————————————————————————————
-
-cover
-
-——————————————————————————————————————————————*/
-  .cover__title {
-    font-size: 150px;
   }
   /*————————————————————————————————————————————
 
