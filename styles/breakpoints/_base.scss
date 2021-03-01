@@ -78,11 +78,7 @@ wrapper, container
   width: 100%;
   height: 100vh;
 }
-// .container-width {
-//   width: 90%;
-//   margin: 0 auto;
-//   max-width: $contentMaxWidth;
-// }
+
 .content-width {
   width: 90%;
   margin: 0 auto;
@@ -224,9 +220,9 @@ skill
     position: relative;
     @extend .mt-sm;
     .sub-title {
-      bottom: 0;
-      right: 0;
-      transform: translateY(100%) rotate(-10deg);
+      top: 0;
+      left: 0;
+      transform: translateY(-120%) rotate(-10deg);
     }
     div:last-child {
       margin-left: 16px;

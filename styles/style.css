@@ -265,10 +265,10 @@ skill
 }
 
 .skill__web-design .sub-title {
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translateY(100%) rotate(-10deg);
-          transform: translateY(100%) rotate(-10deg);
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-120%) rotate(-10deg);
+          transform: translateY(-120%) rotate(-10deg);
 }
 
 .skill__web-design div:last-child {
@@ -474,10 +474,6 @@ skill
     width: calc((100% - 32px) / 6);
   }
   .skill__web-design .sub-title {
-    bottom: auto;
-    right: auto;
-    top: 0;
-    left: 0;
     -webkit-transform: translateY(-120%) translateX(100%) rotate(-10deg);
             transform: translateY(-120%) translateX(100%) rotate(-10deg);
   }
