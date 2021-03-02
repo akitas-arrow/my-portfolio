@@ -395,6 +395,7 @@ footer .sns-icons .icon {
 
 footer .sns-icons .icon a {
   display: block;
+  height: 100%;
 }
 
 footer .sns-icons .icon#github {
@@ -407,6 +408,9 @@ footer .sns-icons .icon#twitter svg {
 
 footer .sns-icons .icon#twitter, footer .sns-icons .icon#wantedly {
   background-color: #fff;
+}
+
+footer .sns-icons .icon#twitter a, footer .sns-icons .icon#wantedly a {
   padding: 8px;
 }
 

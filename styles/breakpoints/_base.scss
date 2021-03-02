@@ -351,6 +351,7 @@ footer {
       margin-right: 24px;
       a {
         display: block;
+        height: 100%;
       }
       &#github {
         background-color: transparent;
@@ -363,7 +364,9 @@ footer {
       &#twitter,
       &#wantedly {
         background-color: $cWhite;
-        padding: 8px;
+        a {
+          padding: 8px;
+        }
       }
     }
     :last-child {
